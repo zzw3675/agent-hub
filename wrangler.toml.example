@@ -1,0 +1,12 @@
+name = "agent-hub"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# 先用 wrangler 创建 KV 命名空间，再把得到的 id 填到下面：
+#   npx wrangler kv namespace create HUB
+[[kv_namespaces]]
+binding = "HUB"
+id = "YOUR_KV_ID"
+
+# 鉴权用的共享 API 钥匙不要写在这里，用 Secret 注入：
+#   npx wrangler secret put API_KEYS

@@ -1,0 +1,11 @@
+# 密钥与本地配置（只提交 wrangler.toml.example 模板）
+.api-key
+*.key
+.dev.vars
+wrangler.toml
+
+# 依赖与 wrangler 本地状态
+node_modules/
+.wrangler/
+
+*.log
